@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Home</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto;max-width:720px;margin:64px auto;padding:0 16px;line-height:1.6}
+    .card{border:1px solid #ddd;border-radius:12px;padding:20px}
+    a{color:inherit}
+    small{color:#666}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>hi, I'm yanqiyang62</h1>
+    <p>This is my home page</p>
+    <p>
+      <a href="https://github.com/yanqiyang62">GitHub</a> ·
+      <a href="mailto:yanqiyang62@gmail.com">Email</a>
+    </p>
+    <small>© <span id="y"></span> XXX</small>
+  </div>
+  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
