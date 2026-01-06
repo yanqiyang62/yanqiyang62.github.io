@@ -1,26 +1,155 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Home</title>
+  <title>Yanqi Yang</title>
+  <meta name="description" content="LLM alignment, reward modeling, RLHF, tool use, evaluation." />
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto;max-width:720px;margin:64px auto;padding:0 16px;line-height:1.6}
-    .card{border:1px solid #ddd;border-radius:12px;padding:20px}
-    a{color:inherit}
-    small{color:#666}
+    :root{
+      --bg:#fbfcfe; --card:#fff; --text:#0f172a; --muted:#64748b;
+      --line:#e5e7eb; --accent:#2563eb; --shadow:0 18px 45px rgba(15,23,42,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1000px 560px at 20% 8%, rgba(37,99,235,.08), transparent 60%),
+        radial-gradient(900px 520px at 85% 18%, rgba(16,185,129,.08), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height:1.7;
+      min-height: 120vh;
+    }
+
+    .wrap{
+      max-width: 860px;
+      margin: 78px auto 140px;
+      padding: 0 18px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+	  padding: 30px 52px;
+    }
+
+    @media (max-width: 640px){
+      .wrap{ margin: 56px auto 120px; }
+      .card{ padding: 30px 22px; }
+    }
+
+    h1{
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: .12px;
+      margin: 0 0 10px;
+      text-transform: none;
+    }
+
+    .subtitle{
+      margin:0 0 26px;
+      color:var(--muted);
+      font-size: 16px;
+    }
+
+    p{ margin: 0 0 28px; }
+
+    h2{
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 14px;
+    }
+
+    ul{ margin: 0; padding-left: 18px; }
+    li{ margin: 10px 0; }
+
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top: 40px;
+    }
+
+    .btn{
+      display:inline-flex; align-items:center;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--text);
+      text-decoration:none;
+      font-size: 14px;
+    }
+    .btn:hover{
+      border-color: rgba(37,99,235,.35);
+      box-shadow: 0 12px 26px rgba(37,99,235,.10);
+      transition: .15s ease;
+    }
+
+    footer{
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: .95em;
+    }
+
+    .spacer-xl{height: 270px;}
+    .spacer-xxl{height: 12;}
   </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>hi, I'm yanqiyang62</h1>
-    <p>This is my home page</p>
-    <p>
-      <a href="https://github.com/yanqiyang62">GitHub</a> ·
-      <a href="mailto:yanqiyang62@gmail.com">Email</a>
-    </p>
-    <small>© <span id="y"></span> XXX</small>
+  <div class="wrap">
+    <main class="card">
+      <h1>Yanqi Yang</h1>
+      <p class="subtitle"></p>
+
+      <p>
+        I work on LLM alignment and reliability, focusing on reward modeling, tool-use and evaluation.
+      </p>
+
+      <div class="spacer-xl"></div>
+
+      <h2>Research Interests</h2>
+		<ul>
+		  <li><strong>Reward modeling.</strong> preference learning, reward hacking mitigation and robust reward design under label noise and distribution shift.</li>
+		  <li><strong>Tool use &amp; agents.</strong> Reliable tool-call planning/execution, tool choice &amp; routing.</li>
+		  <li><strong>Evaluation.</strong> Building trustworthy evals for alignment and reliability.</li>
+
+		</ul>
+
+      <div class="spacer-xxl"></div>
+
+      <div class="links">
+   
+        <a class="btn" href="https://yanqiyang62.github.io">Homepage</a>
+        <a class="btn" href="mailto:yanqiyang62@gmail.com">Email</a>
+
+      </div>
+
+      <div class="spacer-xxl"></div>
+    </main>
+
+    <footer>© <span id="y"></span></footer>
   </div>
-  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
